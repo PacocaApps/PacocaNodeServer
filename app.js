@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var childProcess = require('child_process');
 
 
 
@@ -17,7 +18,6 @@ app.get('/', function (req, res) {
 
 
   //START BOT PROCESS
-  var childProcess = require('child_process');
 
 function runScript(scriptPath, callback) {
 
@@ -63,3 +63,11 @@ var port = process.env.PORT || 3000;
 app.listen(port, function () {
     console.log('Umbler listening on port %s', port);
 });
+
+
+
+
+function DAM(){
+console.log("wowowowo")
+}
+
