@@ -10,7 +10,7 @@ var app = express();
 
 
 app.get('/', function (req, res) {
-    res.send('Hello World!');
+    res.send('Pacoca Node Server v1.0');
   });
   
 
@@ -44,7 +44,7 @@ function runScript(scriptPath, callback) {
 }
 
 // Now we can run a script and invoke a callback when complete, e.g.
-runScript('/bot/bot.js', function (err) {
+runScript('bot/bot.js', function (err) {
     if (err) throw err;
     console.log('finished running some-script.js');
 });
@@ -59,34 +59,6 @@ runScript('/bot/bot.js', function (err) {
 
 
    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var port = process.env.PORT || 3000;
 app.listen(port, function () {
     console.log('Umbler listening on port %s', port);
