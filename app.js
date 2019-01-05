@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-const { execFile } = require('child_process');
+var exec = require('child_process').exec;
 
 
 app.get('/', function (req, res) {
@@ -9,14 +9,17 @@ app.get('/', function (req, res) {
   
 
 
-
-const child = execFile('bot/bot.js')//, ['--version'], (error, stdout, stderr) => {
-//   if (error) {
-//     throw error;
-//   }
-//   console.log(stdout);
-// });
-
+ 
+  var child = exec('node bot/bot.js');
+  child.stdout.on('data', function(data) {
+      console.log('stdout: ' + data);
+  });
+  child.stderr.on('data', function(data) {
+      console.log('stdout: ' + data);
+  });
+  child.on('close', function(code) {
+      console.log('closing code: ' + code);
+  });
 
 
 console.log("APP FUCKING LOADED")
