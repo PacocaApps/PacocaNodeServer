@@ -67,7 +67,4 @@ app.listen(port, function () {
 
 
 
-function DAM(){
-console.log("wowowowo")
-}
 
