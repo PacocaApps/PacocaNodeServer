@@ -4,7 +4,7 @@ var exec = require('child_process').exec;
 
 
 app.get('/', function (req, res) {
-    res.send('Pacoca Node Server v1.0');
+    res.send('Pacoca Node Server v1.1');
   });
   
 
@@ -45,7 +45,7 @@ controlServerchild.on('close', function(code) {
 
 //START ENCRYPTED WEB CHAT
 
-var chat = exec('node chat/chat.js');
+var chat = exec('node chat/chatserver.js');
 
 chat.stdout.on('data', function(data) {
     console.log('stdout: ' + data);
