@@ -12,6 +12,8 @@
     "check-node-version": "^2.1.0",
     "cluster": "^0.7.7",
     "express": "^4.15.2",
-    "os": "^0.1.1"
+    "http": "0.0.0",
+    "os": "^0.1.1",
+    "websocket": "^1.0.28"
   }
 }

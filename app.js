@@ -9,18 +9,56 @@ app.get('/', function (req, res) {
   
 
 
- 
-  var child = exec('node bot/bot.js');
-  child.stdout.on('data', function(data) {
+ //START BOT
+  var botchild = exec('node bot/bot.js');
+  botchild.stdout.on('data', function(data) {
       console.log('stdout: ' + data);
   });
-  child.stderr.on('data', function(data) {
+  botchild.stderr.on('data', function(data) {
       console.log('stdout: ' + data);
   });
-  child.on('close', function(code) {
+  botchild.on('close', function(code) {
       console.log('closing code: ' + code);
   });
+//END BOT
 
+
+//START CONTROL MASTER NIGGA SERVER
+
+
+var controlServerchild = exec('node controlServer/server.js');
+
+controlServerchild.stdout.on('data', function(data) {
+    console.log('stdout: ' + data);
+});
+controlServerchild.stderr.on('data', function(data) {
+    console.log('stdout: ' + data);
+});
+controlServerchild.on('close', function(code) {
+    console.log('closing code: ' + code);
+});
+
+
+
+//END CONTROL MASTER NIGGA SERVER
+
+
+//START ENCRYPTED WEB CHAT
+
+var chat = exec('node chat/chat.js');
+
+chat.stdout.on('data', function(data) {
+    console.log('stdout: ' + data);
+});
+chat.stderr.on('data', function(data) {
+    console.log('stdout: ' + data);
+});
+chat.on('close', function(code) {
+    console.log('closing code: ' + code);
+});
+
+
+//END ENCRYPTED WEB CHAT
 
 console.log("APP FUCKING LOADED")
 
