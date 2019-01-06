@@ -33,7 +33,10 @@ var server = http.createServer(function(request, response) {
   // not HTTP server
 });
 server.listen(webSocketsServerPort, function() {
-  console.log((new Date()) + " Server is listening on port "
+
+var host = server.address().address;
+
+  console.log((new Date()) + " Server is on: "+host+ " and listening on port "
       + webSocketsServerPort);
 });
 /**
