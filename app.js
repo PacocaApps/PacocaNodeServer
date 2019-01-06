@@ -4,7 +4,7 @@ var exec = require('child_process').exec;
 
 
 app.get('/', function (req, res) {
-    res.send('Pacoca Node Server v1.1');
+    res.send('Pacoca Node Server v1.21');
   });
   
 
