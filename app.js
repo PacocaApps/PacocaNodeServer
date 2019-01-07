@@ -97,12 +97,12 @@ var server = http.createServer(function(request, response) {
     // Not important for us. We're writing WebSocket server,
     // not HTTP server
   });
-  server.listen(port, function() {
+//   server.listen(port, function() {
   
-  var host = server.address().address;
+//   var host = server.address().address;
   
-    console.log((new Date()) + " Server is on: "+host+ " and listening on port "
-        + webSocketsServerPort);
-  });
+//     console.log((new Date()) + " Server is on: "+host+ " and listening on port "
+//         + webSocketsServerPort);
+//   });
 
 
