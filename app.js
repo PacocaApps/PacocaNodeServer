@@ -76,9 +76,9 @@ console.log("APP FUCKING LOADED")
 
 
 var port = process.env.PORT || 3000;
-app.listen(port, function () {
-    console.log('Umbler listening on port %s', port);
-});
+// app.listen(port, function () {
+//     console.log('Umbler listening on port %s', port);
+// });
 
 
 
@@ -99,8 +99,7 @@ var server = http.createServer(function(request, response) {
   });
 
 
-  var websocketPORT = 80;
-  server.listen(websocketPORT, function() {
+  server.listen(port, function() {
   
   var host = server.address().address;
   
