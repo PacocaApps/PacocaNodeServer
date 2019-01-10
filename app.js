@@ -56,7 +56,7 @@ controlServerchild.on('close', function(code) {
 
 // END ENCRYPTED WEB CHAT
 
-console.log("APP FUCKING LOADED")
+console.log("PRIMARY FUNCTIONS ONLINE")
 
 
 
