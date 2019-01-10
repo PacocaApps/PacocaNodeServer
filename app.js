@@ -39,17 +39,17 @@ controlServerchild.on('close', function(code) {
 
 // START ENCRYPTED WEB CHAT
 
-// var chat = exec('node chat/chatserver.js');
+var chat = exec('node chat/chatserver.js');
 
-// chat.stdout.on('data', function(data) {
-//     console.log('stdout: ' + data);
-// });
-// chat.stderr.on('data', function(data) {
-//     console.log('stdout: ' + data);
-// });
-// chat.on('close', function(code) {
-//     console.log('closing code: ' + code);
-// });
+chat.stdout.on('data', function(data) {
+    console.log('stdout: ' + data);
+});
+chat.stderr.on('data', function(data) {
+    console.log('stdout: ' + data);
+});
+chat.on('close', function(code) {
+    console.log('closing code: ' + code);
+});
 
 
 // END ENCRYPTED WEB CHAT
