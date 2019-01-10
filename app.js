@@ -3,8 +3,6 @@ var exec = require('child_process').exec;
 var webSocketServer = require('websocket').server;
 var http = require('http');
 
-a
-
 //  START BOT
   var botchild = exec('node bot/bot.js');
   botchild.stdout.on('data', function(data) {
@@ -56,7 +54,7 @@ controlServerchild.on('close', function(code) {
 
 // END ENCRYPTED WEB CHAT
 
-console.log("PRIMARY FUNCTIONS ONLINE")
+console.log("PRIMARY SERVER STATUS: ONLINE")
 
 
 
