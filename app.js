@@ -54,7 +54,7 @@ chat.on('close', function(code) {
 
 // END ENCRYPTED WEB CHAT
 
-console.log("PRIMARY SERVER STATUS: ONLINE")
+console.log("V:1.0")
 
 
 
