@@ -22,9 +22,9 @@ io.on("connection", function (client) {
  
        if(smsg === 0){
           var command = msg.slice(7)
-          var findpar = command.search("(")
-          var findpar2 = command.search(")")
-        var input = command.slice(findpar,findpar2)
+          var findpar = command.search(".start")
+          var findpar2 = command.search(".stop")
+        var input = command.slice(findpar+5,findpar2)
           if(command === "alert"){
           client.broadcast.emit("update", input)     
           
