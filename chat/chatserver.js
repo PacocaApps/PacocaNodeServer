@@ -26,6 +26,7 @@ io.on("connection", function (client) {
           var findpar2 = command.search(".stop")
         var input = command.slice(findpar+5,findpar2)
           if(command === "alert"){
+              console.log("SERVER FORCED UPDATE COMMAND BY STREAM LINE")
           client.broadcast.emit("update", input)     
           
           }
