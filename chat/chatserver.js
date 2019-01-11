@@ -19,15 +19,19 @@ io.on("connection", function (client) {
     client.on("send", function(msg){
         console.log("Message: " + msg);
        var smsg = msg.search(/server/i)        
- 
+     
        if(smsg === 0){
           var command = msg.slice(7)
           var findpar = command.search(".start")
           var findpar2 = command.search(".stop")
-        var input = command.slice(findpar+5,findpar2)
-          if(command === "alert"){
+          var orcommand = command.slice(0,findpar)
+
+        var input = command.slice(findpar+6,findpar2)
+      
+          if(orcommand === "alert"){
               console.log("SERVER FORCED UPDATE COMMAND BY STREAM LINE")
-          client.broadcast.emit("update", input)     
+          client.broadcast.emit("update", input)   
+          client.emit("update",input)  
           
           }
 
