@@ -17,7 +17,24 @@ io.on("connection", function (client) {
     });
 
     client.on("send", function(msg){
-    	console.log("Message: " + msg);
+        console.log("Message: " + msg);
+       var smsg = msg.search(/server/i)        
+ 
+       if(smsg === 0){
+          var command = msg.slice(7)
+          var findpar = command.search("('")
+          var findpar2 = command.search("')")
+        var input = command.slice(findpar,findpar2)
+          if(command === "alert"){
+          client.broadcast.emit("update", input)     
+          
+          }
+
+
+       }
+
+
+
         client.broadcast.emit("chat", clients[client.id], msg);
     });
 
