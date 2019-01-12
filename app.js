@@ -12,7 +12,7 @@ var http = require('http');
       console.log('stdout: ' + data);
   });
   botchild.on('close', function(code) {
-      console.log('closing code: ' + code);
+      console.log('closing BOT code: ' + code);
   });
 // END BOT
 
