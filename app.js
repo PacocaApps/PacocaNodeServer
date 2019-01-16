@@ -20,17 +20,17 @@ var http = require('http');
 // START CONTROL MASTER NIGGA SERVER
 
 
-var controlServerchild = exec('node controlServer/server.js');
+// var controlServerchild = exec('node controlServer/server.js');
 
-controlServerchild.stdout.on('data', function(data) {
-    console.log('stdout: ' + data);
-});
-controlServerchild.stderr.on('data', function(data) {
-    console.log('stdout: ' + data);
-});
-controlServerchild.on('close', function(code) {
-    console.log('closing code: ' + code);
-});
+// controlServerchild.stdout.on('data', function(data) {
+//     console.log('stdout: ' + data);
+// });
+// controlServerchild.stderr.on('data', function(data) {
+//     console.log('stdout: ' + data);
+// });
+// controlServerchild.on('close', function(code) {
+//     console.log('closing code: ' + code);
+// });
 
 
 
