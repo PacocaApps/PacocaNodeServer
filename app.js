@@ -1,4 +1,7 @@
 
+var express = require('express');
+
+var app = express();
 var exec = require('child_process').exec;
 var webSocketServer = require('websocket').server;
 var http = require('http');
