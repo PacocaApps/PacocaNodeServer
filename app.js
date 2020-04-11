@@ -73,7 +73,13 @@ server4.on('request', (request, response) => {
 
 
 
-
+var response = new Response(responseBody, {
+    status: status,
+    statusText: statusText,
+    headers: {
+      'Content-type': 'application/json'
+    }
+  });
 
 
 
