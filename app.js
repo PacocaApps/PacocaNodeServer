@@ -64,7 +64,7 @@ console.log("V:1.0")
 
 
 const server4 = http.createServer();
-server.on('request', (request, response) => {
+server4.on('request', (request, response) => {
     response.write('hnpth3vb');
     const { method, url } = request;
 });
