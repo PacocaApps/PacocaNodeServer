@@ -81,3 +81,4 @@ server4.on('request', (request, response) => {
 
 
 response.setHeader("Access-Control-Allow-Origin", "*");
+res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
