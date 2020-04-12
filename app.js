@@ -3,6 +3,48 @@ var exec = require('child_process').exec;
 var webSocketServer = require('websocket').server;
 var http = require('http');
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// EXECUTE SAFETY SELI SABAT
+
+var express = require('express')
+var cors = require('cors')
+var app = express()
+
+app.use(cors())
+
+app.get('/products/:id', function (req, res, next) {
+  res.json({msg: 'This is CORS-enabled for all origins!'})
+})
+
+app.listen(80, function () {
+  console.log('CORS-enabled web server listening on port 80')
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //  START BOT
   var botchild = exec('node bot/bot.js');
   botchild.stdout.on('data', function(data) {
@@ -73,18 +115,3 @@ server4.on('request', (request, response) => {
 
 
 
-var response = new Response(responseBody, {
-    status: status,
-    statusText: statusText,
-    headers: {
-      'Content-type': 'application/json'
-    }
-  });
-
-
-
-
-
-
-response.setHeader("Access-Control-Allow-Origin", "*");
-res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
